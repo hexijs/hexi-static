@@ -1,5 +1,5 @@
 'use strict'
-const express = require('express')
+const serveStatic = require('serve-static')
 
 module.exports = function(server) {
   server.pre('route', (next, opts) => {
@@ -8,7 +8,7 @@ module.exports = function(server) {
     }
 
     let staticOpts = opts.handler.static
-    opts.handler = express.static(staticOpts.root, staticOpts)
+    opts.handler = serveStatic(staticOpts.root, staticOpts)
     next(opts)
   })
 }

@@ -3,7 +3,9 @@
   "version": "0.0.0",
   "description": "A hexi plugin for serving static files",
   "main": "index.js",
-  "dependencies": {},
+  "dependencies": {
+    "serve-static": "^1.10.2"
+  },
   "devDependencies": {
     "hexi": "^0.2.0",
     "istanbul": "^0.4.2",
@@ -25,6 +27,9 @@
     "hexi",
     "plugin",
     "static"
+  ],
+  "files": [
+    "index.js"
   ],
   "author": {
     "name": "Zoltan Kochan",
