@@ -2,14 +2,11 @@
 const serveStatic = require('serve-static')
 
 module.exports = function(server) {
-  server.pre('route', (next, opts) => {
-    if (typeof opts.handler !== 'object' || !opts.handler.static) {
-      return next(opts)
-    }
-
-    let staticOpts = opts.handler.static
-    opts.handler = serveStatic(staticOpts.root, staticOpts)
-    next(opts)
+  server.route.pre((next, opts) => {
+    next(Object.assign(opts, {
+      handler: !opts.handler || !opts.handler.static ? opts.handler :
+        serveStatic(opts.handler.static.root, opts.handler.static),
+    }))
   })
 }
 

@@ -7,7 +7,7 @@
     "serve-static": "^1.10.2"
   },
   "devDependencies": {
-    "hexi": "^0.2.0",
+    "hexi": "^0.7.1",
     "istanbul": "^0.4.2",
     "mocha": "^2.3.4",
     "supertest": "^1.1.0"

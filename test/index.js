@@ -6,9 +6,9 @@ const request = require('supertest')
 describe('auth', function() {
   let server
 
-  beforeEach(function(next) {
-    server = new hexi.Server()
-    server.register([hexiStatic], next)
+  beforeEach(function() {
+    server = hexi()
+    return server.register(hexiStatic)
   })
 
   it('should return static file', function(done) {
