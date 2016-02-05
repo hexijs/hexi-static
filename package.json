@@ -21,7 +21,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/zkochan/hexi-static.git"
+    "url": "git+https://github.com/hexijs/hexi-static.git"
   },
   "keywords": [
     "hexi",
@@ -38,7 +38,7 @@
   },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/zkochan/hexi-static/issues"
+    "url": "https://github.com/hexijs/hexi-static/issues"
   },
-  "homepage": "https://github.com/zkochan/hexi-static#readme"
+  "homepage": "https://github.com/hexijs/hexi-static#readme"
 }
